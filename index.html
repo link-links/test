@@ -6,40 +6,46 @@
 <title>MIN_4IK</title>
 
 <style>
+/* ------------------------
+   Стили для всей страницы
+------------------------- */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000000; /* тёмный фон */
-    color: #ffffff;       /* цвет текста */
-    display: flex;
+    margin: 0;                     /* убираем отступы браузера */
+    font-family: Arial, sans-serif;/* шрифт текста */
+    background: #121212;           /* тёмный фон */
+    color: #ffffff;                /* цвет текста по умолчанию */
+    display: flex;                 /* используем flex для центрирования */
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh;                 /* высота экрана */
 }
 
 .container {
-    text-align: center;
+    text-align: center;            /* все элементы внутри по центру */
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 20px;           /* отступ снизу от имени */
 }
 
+/* ------------------------
+   Стили для кнопок
+------------------------- */
 .button {
-    display: block;
-    width: 220px;
-    padding: 12px;
-    margin: 8px auto;
-    background: #252525; /* тёмная кнопка */
-    border: 1px solid #333;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #ffffff;
-    transition: 0.2s;
+    display: block;                /* кнопка на отдельной строке */
+    width: 220px;                  /* ширина кнопки */
+    padding: 12px;                 /* внутренние отступы */
+    margin: 8px auto;              /* отступ сверху/снизу, центрирование */
+    background: #1f1f1f;           /* цвет кнопки */
+    border: 1px solid #333;        /* рамка кнопки */
+    border-radius: 8px;            /* скругление углов */
+    text-decoration: none;         /* убираем подчеркивание текста */
+    color: #ffffff;                /* цвет текста кнопки */
+    transition: 0.2s;              /* плавный эффект при наведении */
 }
 
 .button:hover {
-    background: #757575; /* чуть светлее при наведении */
+    background: #333333;           /* цвет кнопки при наведении */
 }
 </style>
 </head>
@@ -47,26 +53,45 @@ h1 {
 <body>
 
 <div class="container">
+    <!-- ============================
+         Здесь имя страницы/пользователя
+         Меняй на любое, например: MIN_4IK
+    ============================ -->
     <h1>MIN_4IK</h1>
+
+    <!-- ============================
+         Здесь будут автоматически
+         генерироваться кнопки
+    ============================ -->
     <div id="buttons"></div>
 </div>
 
 <script>
-// 👉 Добавляешь свои кнопки здесь
+// ============================
+// Здесь добавляешь свои кнопки
+// Формат: {name: "Название кнопки", url: "Ссылка"}
+// Пример:
 const links = [
-    {name: "Telegram", url: "https://t.me/your"},
-    {name: "YouTube", url: "https://youtube.com/your"},
-    {name: "Discord", url: "#"}
+    {name: "Telegram", url: "https://t.me/yourusername"},
+    {name: "YouTube", url: "https://youtube.com/yourchannel"},
+    {name: "Discord", url: "https://discord.gg/yourlink"}
 ];
 
+// ============================
+// Ниже код, который создаёт кнопки
+// НЕ ТРОГАЙ, если не понимаешь
+// ============================
 const container = document.getElementById("buttons");
 
 links.forEach(link => {
-    const a = document.createElement("a");
-    a.className = "button";
-    a.href = link.url;
-    a.innerText = link.name;
-    a.target = "_blank";
-    container.appendChild(a);
+    const a = document.createElement("a");  // создаём элемент <a>
+    a.className = "button";                 // применяем стиль кнопки
+    a.href = link.url;                      // ссылка куда ведёт
+    a.innerText = link.name;                // текст на кнопке
+    a.target = "_blank";                    // открываем в новой вкладке
+    container.appendChild(a);               // добавляем кнопку на страницу
 });
-</
+</script>
+
+</body>
+</html>
