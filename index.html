@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIN_4IK</title>
+
+<style>
+body {
+    margin: 0;
+    background: black;
+    color: #00ff00;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    width: 220px;
+    padding: 12px;
+    margin: 6px;
+    text-align: center;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #00ff00;
+    color: black;
+}
+</style>
+</head>
+
+<body>
+
+<h1>MIN_4IK</h1>
+
+<div id="buttons"></div>
+
+<script>
+// 👉 ТУТ ТЫ ДОБАВЛЯЕШЬ КНОПКИ
+const links = [
+    {name: "Telegram", url: "https://t.me/your"},
+    {name: "YouTube", url: "https://youtube.com/your"},
+    {name: "Discord", url: "https://discord.gg/your"},
+    {name: "Twitch", url: "https://twitch.tv/your"}
+];
+
+// генерация кнопок
+const container = document.getElementById("buttons");
+
+links.forEach(link => {
+    const a = document.createElement("a");
+    a.className = "button";
+    a.href = link.url;
+    a.innerText = link.name;
+    a.target = "_blank";
+    container.appendChild(a);
+});
+</script>
+
+</body>
+</html>
