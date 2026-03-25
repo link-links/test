@@ -8,60 +8,56 @@
 <style>
 body {
     margin: 0;
-    background: black;
-    color: #00ff00;
-    font-family: monospace;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction: column;
+}
+
+.container {
+    text-align: center;
 }
 
 h1 {
-    font-size: 40px;
     margin-bottom: 20px;
 }
 
-#buttons {
-    display: flex;
-    flex-direction: column;
-}
-
 .button {
+    display: block;
     width: 220px;
     padding: 12px;
-    margin: 6px;
-    text-align: center;
-    border: 1px solid #00ff00;
-    color: #00ff00;
+    margin: 8px auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     text-decoration: none;
-    transition: 0.3s;
+    color: black;
+    transition: 0.2s;
 }
 
 .button:hover {
-    background: #00ff00;
-    color: black;
+    background: #eaeaea;
 }
 </style>
 </head>
 
 <body>
 
-<h1>MIN_4IK</h1>
-
-<div id="buttons"></div>
+<div class="container">
+    <h1>MIN_4IK</h1>
+    <div id="buttons"></div>
+</div>
 
 <script>
-// 👉 ТУТ ТЫ ДОБАВЛЯЕШЬ КНОПКИ
+// 👉 добавляешь кнопки здесь
 const links = [
-    {name: "Telegram", url: "https://t.me/your"},
-    {name: "YouTube", url: "https://youtube.com/your"},
-    {name: "Discord", url: "https://discord.gg/your"},
-    {name: "Twitch", url: "https://twitch.tv/your"}
+    {name: "Telegram", url: "#"},
+    {name: "YouTube", url: "#"},
+    {name: "Discord", url: "#"}
 ];
 
-// генерация кнопок
 const container = document.getElementById("buttons");
 
 links.forEach(link => {
